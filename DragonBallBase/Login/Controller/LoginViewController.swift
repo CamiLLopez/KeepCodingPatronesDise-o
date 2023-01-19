@@ -54,19 +54,20 @@ class LoginViewController: UIViewController {
     func loginButtonTapped(){
         
         let viewLogin = LoginView()
-        
-        guard let email = emailTextField.text,
+        viewLogin.buttonHandler = {
+            
+        guard let email = self.emailTextField.text,
         !email.isEmpty else {
             print("email is empty")
          return
          }
-         guard let password = passwordTextField.text, !password.isEmpty else {
+        guard let password = self.passwordTextField.text, !password.isEmpty else {
          print("Password is empty")
          return
          }
-            viewLogin.buttonHandler = {
-                print("Llego a viewController")
-                self.getLogin(email: email, password: password)
+
+          print("Llego a viewController")
+          self.getLogin(email: email, password: password)
         }
      }
 }

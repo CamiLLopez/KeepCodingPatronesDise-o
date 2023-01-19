@@ -42,15 +42,13 @@ class HeroListViewModel: NSObject {
         
         let apiClient = ApiClient(token: myToken)
 
-        apiClient.login(user: email ?? "camilallopez95@gmail.com", password: password ?? "Cl1995#") { login, error in
+        apiClient.login(user: email ?? "camilallopez95@gmail.com", password: password ?? "Cl1995#") { loginToken, error in
             
-            debugPrint("PMG: \(login ?? "No login")")
+            debugPrint("PMG: \(loginToken ?? "No login")")
             
             debugPrint("PMG:", error ?? "No error")
             
-            print("In login")
-            
-            self.updateLogin?(login ?? "No token")
+            self.updateLogin?(loginToken ?? "No token")
         }
     }
 }
