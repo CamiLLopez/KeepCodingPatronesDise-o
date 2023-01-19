@@ -26,7 +26,7 @@ class HeroesListView: UIView {
     //let table = UIView()
     let heroesTableView = {
         let tableView = UITableView()
-        tableView.register(HeroeListViewCell.self, forCellReuseIdentifier: "HeroesListViewCell")
+        tableView.register(HeroListViewCell.self, forCellReuseIdentifier: "HeroesListViewCell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         //tableView.backgroundColor = .blue
         

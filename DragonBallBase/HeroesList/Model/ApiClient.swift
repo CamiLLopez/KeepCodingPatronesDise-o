@@ -19,6 +19,8 @@ final class ApiClient {
   
   private var token: String?
   
+    
+    
   convenience init(token: String) {
     self.init()
     self.token = token

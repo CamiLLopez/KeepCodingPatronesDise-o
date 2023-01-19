@@ -16,11 +16,17 @@
 		5D78B9A8297088C100274846 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D78B9A7297088C100274846 /* Constants.swift */; };
 		5D78B9AD2970895600274846 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D78B9AC2970895600274846 /* ApiClient.swift */; };
 		5D78B9AF2970897600274846 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D78B9AE2970897600274846 /* HeroModel.swift */; };
+		DF008B7529783701001A16C8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF008B7429783701001A16C8 /* LoginView.swift */; };
+		DF008B7A29787415001A16C8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DF008B7929787415001A16C8 /* Kingfisher */; };
 		DFFF75362975D5CE007C5C2D /* HeroesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF75352975D5CE007C5C2D /* HeroesListView.swift */; };
 		DFFF75382975DB30007C5C2D /* HeroesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF75372975DB30007C5C2D /* HeroesListTableViewController.swift */; };
 		DFFF753A2975EF80007C5C2D /* HeroesListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF75392975EF80007C5C2D /* HeroesListTableViewDataSource.swift */; };
-		DFFF753C2975F760007C5C2D /* HeroeListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF753B2975F760007C5C2D /* HeroeListViewCell.swift */; };
+		DFFF753C2975F760007C5C2D /* HeroListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF753B2975F760007C5C2D /* HeroListViewCell.swift */; };
 		DFFF753F2975FE86007C5C2D /* HeroListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF753E2975FE86007C5C2D /* HeroListViewModel.swift */; };
+		DFFF75412977228A007C5C2D /* HeroesListTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF75402977228A007C5C2D /* HeroesListTableViewDelegate.swift */; };
+		DFFF754629772BDE007C5C2D /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF754529772BDE007C5C2D /* HeroDetailView.swift */; };
+		DFFF754829772C12007C5C2D /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF754729772C12007C5C2D /* HeroDetailViewController.swift */; };
+		DFFF754E2977395B007C5C2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFF754D2977395B007C5C2D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +41,16 @@
 		5D78B9A7297088C100274846 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5D78B9AC2970895600274846 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		5D78B9AE2970897600274846 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		DF008B7429783701001A16C8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DFFF75352975D5CE007C5C2D /* HeroesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListView.swift; sourceTree = "<group>"; };
 		DFFF75372975DB30007C5C2D /* HeroesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListTableViewController.swift; sourceTree = "<group>"; };
 		DFFF75392975EF80007C5C2D /* HeroesListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListTableViewDataSource.swift; sourceTree = "<group>"; };
-		DFFF753B2975F760007C5C2D /* HeroeListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeListViewCell.swift; sourceTree = "<group>"; };
+		DFFF753B2975F760007C5C2D /* HeroListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewCell.swift; sourceTree = "<group>"; };
 		DFFF753E2975FE86007C5C2D /* HeroListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewModel.swift; sourceTree = "<group>"; };
+		DFFF75402977228A007C5C2D /* HeroesListTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListTableViewDelegate.swift; sourceTree = "<group>"; };
+		DFFF754529772BDE007C5C2D /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
+		DFFF754729772C12007C5C2D /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		DFFF754D2977395B007C5C2D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF008B7A29787415001A16C8 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +84,7 @@
 		5D78B98F2970857C00274846 /* DragonBallBase */ = {
 			isa = PBXGroup;
 			children = (
+				DFFF75492977381F007C5C2D /* Login */,
 				DFFF753D2975FE71007C5C2D /* MVVM */,
 				5D78B9A6297088B300274846 /* Utils */,
 				5D78B9A52970888700274846 /* HeroesList */,
@@ -90,6 +103,9 @@
 		5D78B9A42970887000274846 /* HeroDetail */ = {
 			isa = PBXGroup;
 			children = (
+				DFFF754429772B7F007C5C2D /* Controller */,
+				DFFF754329772B7B007C5C2D /* View */,
+				DFFF754229772B76007C5C2D /* Model */,
 			);
 			path = HeroDetail;
 			sourceTree = "<group>";
@@ -125,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				DFFF75352975D5CE007C5C2D /* HeroesListView.swift */,
-				DFFF753B2975F760007C5C2D /* HeroeListViewCell.swift */,
+				DFFF753B2975F760007C5C2D /* HeroListViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,6 +151,7 @@
 			children = (
 				DFFF75372975DB30007C5C2D /* HeroesListTableViewController.swift */,
 				DFFF75392975EF80007C5C2D /* HeroesListTableViewDataSource.swift */,
+				DFFF75402977228A007C5C2D /* HeroesListTableViewDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -145,6 +162,62 @@
 				DFFF753E2975FE86007C5C2D /* HeroListViewModel.swift */,
 			);
 			path = MVVM;
+			sourceTree = "<group>";
+		};
+		DFFF754229772B76007C5C2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DFFF754329772B7B007C5C2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DFFF754529772BDE007C5C2D /* HeroDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DFFF754429772B7F007C5C2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DFFF754729772C12007C5C2D /* HeroDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFFF75492977381F007C5C2D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DFFF754C29773844007C5C2D /* Model */,
+				DFFF754B2977383A007C5C2D /* Controller */,
+				DFFF754A29773827007C5C2D /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DFFF754A29773827007C5C2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF008B7429783701001A16C8 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DFFF754B2977383A007C5C2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DFFF754D2977395B007C5C2D /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DFFF754C29773844007C5C2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +236,9 @@
 			dependencies = (
 			);
 			name = DragonBallBase;
+			packageProductDependencies = (
+				DF008B7929787415001A16C8 /* Kingfisher */,
+			);
 			productName = DragonBallBase;
 			productReference = 5D78B98D2970857C00274846 /* DragonBallBase.app */;
 			productType = "com.apple.product-type.application";
@@ -191,6 +267,9 @@
 				Base,
 			);
 			mainGroup = 5D78B9842970857B00274846;
+			packageReferences = (
+				DF008B7829787415001A16C8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 5D78B98E2970857C00274846 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -218,16 +297,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFFF753C2975F760007C5C2D /* HeroeListViewCell.swift in Sources */,
+				DFFF753C2975F760007C5C2D /* HeroListViewCell.swift in Sources */,
+				DFFF754629772BDE007C5C2D /* HeroDetailView.swift in Sources */,
 				5D78B9952970857C00274846 /* ViewController.swift in Sources */,
+				DFFF754E2977395B007C5C2D /* LoginViewController.swift in Sources */,
 				DFFF753F2975FE86007C5C2D /* HeroListViewModel.swift in Sources */,
 				5D78B9912970857C00274846 /* AppDelegate.swift in Sources */,
 				5D78B9932970857C00274846 /* SceneDelegate.swift in Sources */,
 				5D78B9A8297088C100274846 /* Constants.swift in Sources */,
 				DFFF753A2975EF80007C5C2D /* HeroesListTableViewDataSource.swift in Sources */,
 				5D78B9AD2970895600274846 /* ApiClient.swift in Sources */,
+				DFFF75412977228A007C5C2D /* HeroesListTableViewDelegate.swift in Sources */,
 				5D78B9AF2970897600274846 /* HeroModel.swift in Sources */,
+				DFFF754829772C12007C5C2D /* HeroDetailViewController.swift in Sources */,
 				DFFF75362975D5CE007C5C2D /* HeroesListView.swift in Sources */,
+				DF008B7529783701001A16C8 /* LoginView.swift in Sources */,
 				DFFF75382975DB30007C5C2D /* HeroesListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +528,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF008B7829787415001A16C8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF008B7929787415001A16C8 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF008B7829787415001A16C8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D78B9852970857C00274846 /* Project object */;
 }
