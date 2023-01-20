@@ -9,38 +9,46 @@ import Foundation
 import UIKit
 
 
-
 class LoginViewController: UIViewController {
     
-    //consumir APi para hacer login desde el VIEW model de LOGIn
-
-    //Tener el view moodel aqui dentro
-    var viewModel: HeroListViewModel?
-    weak var loginButton: UIButton!
-    weak var passwordTextField: UITextField!
-    weak var emailTextField: UITextField!
+    var mainView: LoginView {self.view as! LoginView}
+    
+    var viewModel: LoginViewModel?
+    var loginButton: UIButton?
+    var passwordTextField: UITextField?
+    var emailTextField: UITextField?
+    var messageView: UILabel?
     var login: String?
     
     override func loadView() {
         
-        view = LoginView()
+        let loginView = LoginView()
+                
+        loginButton = loginView.getLoginButtonView()
+        emailTextField = loginView.getEmailView()
+        passwordTextField = loginView.getPasswordView()
+        messageView = loginView.getMessageView()
+                
+        view = loginView
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loginButtonTapped()
-        //setUpUpdateUI()
+        viewModel = LoginViewModel()
+        
+        loginButton?.addTarget(self, action: #selector(didLoginTapped), for: .touchUpInside)
         
     }
     
     func setUpUpdateUI(){
-        viewModel = HeroListViewModel()
-        //Preparando para recibir datos del viewModel
+        viewModel = LoginViewModel()
         
         viewModel?.updateLogin = { [weak self] login in
             self?.login = login
+            self?.messageView?.text = login
+            
             print(login)
         }
     }
@@ -50,26 +58,22 @@ class LoginViewController: UIViewController {
         viewModel?.fetchLogin(email: email , password: password)
         
     }
+ 
+    @objc func didLoginTapped(sender: UIButton!) {
         
-    func loginButtonTapped(){
-        
-        let viewLogin = LoginView()
-        viewLogin.buttonHandler = {
-            
-        guard let email = self.emailTextField.text,
+        guard let email = emailTextField?.text,
         !email.isEmpty else {
             print("email is empty")
          return
          }
-        guard let password = self.passwordTextField.text, !password.isEmpty else {
+        guard let password = passwordTextField?.text, !password.isEmpty else {
          print("Password is empty")
          return
          }
-
-          print("Llego a viewController")
-          self.getLogin(email: email, password: password)
-        }
-     }
+        
+        self.getLogin(email: email.lowercased(), password: password)
+        setUpUpdateUI()
+    }
 }
 
 

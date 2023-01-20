@@ -10,8 +10,6 @@ import UIKit
 
 class LoginView: UIView {
     
-    //Create header view
-    var buttonHandler: (() -> Void)?
     
     let headerLabel = {
         let label = UILabel()
@@ -45,16 +43,23 @@ class LoginView: UIView {
     
     let loginButton = {
         let button = UIButton()
-        button.addTarget(self, action: #selector(loginAction), for: .touchUpInside)
         button.setTitle("Login", for: .normal)
         button.backgroundColor = .systemOrange
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    let messageView = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //Create app views
+  
         setUpViews()
     }
     
@@ -62,11 +67,22 @@ class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func loginAction(sender: UIButton!) {
-              print("Button Clicked")
-              buttonHandler?()
-         }
+    func getLoginButtonView() -> UIButton{
+        return loginButton
+    }
   
+    func getEmailView()-> UITextField{
+        return emailTextField
+    }
+    
+    func getPasswordView()-> UITextField{
+        return passwordTextField
+    }
+    
+    func getMessageView()-> UILabel{
+        return messageView
+    }
+    
     func setUpViews(){
         backgroundColor = .systemGray6
         
@@ -75,6 +91,7 @@ class LoginView: UIView {
         addSubview(emailTextField)
         addSubview(passwordTextField)
         addSubview(loginButton)
+        addSubview(messageView)
         
        NSLayoutConstraint.activate([
             headerLabel.topAnchor.constraint(equalTo: topAnchor, constant: 60),
@@ -98,7 +115,13 @@ class LoginView: UIView {
             loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
             loginButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
             loginButton.heightAnchor.constraint(equalToConstant: 30),
-            loginButton.widthAnchor.constraint(equalToConstant: 20)
+            
+            messageView.widthAnchor.constraint(equalToConstant: 20),
+            messageView.topAnchor.constraint(equalTo: loginButton.topAnchor, constant: 80),
+            messageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
+            messageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
+            messageView.heightAnchor.constraint(equalToConstant: 30),
+            messageView.widthAnchor.constraint(equalToConstant: 20)
        
        ])
         
