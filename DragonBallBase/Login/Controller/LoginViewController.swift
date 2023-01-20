@@ -47,9 +47,13 @@ class LoginViewController: UIViewController {
         
         viewModel?.updateLogin = { [weak self] login in
             self?.login = login
-            self?.messageView?.text = login
             
-            print(login)
+            DispatchQueue.main.async {
+                                
+            self?.messageView?.text = login
+                
+            }
+
         }
     }
     

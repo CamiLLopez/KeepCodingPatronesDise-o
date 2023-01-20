@@ -32,7 +32,7 @@ class LoginViewModel: NSObject {
             
             debugPrint("PMG:", error ?? "No error")
             
-            self.updateLogin?(loginToken ?? "No token")
+            self.updateLogin?(loginToken ?? "Lo siento, su contraseña o usario es incorrecto")
         
         }
     }

@@ -52,6 +52,7 @@ class LoginView: UIView {
     let messageView = {
         let label = UILabel()
         label.textAlignment = .center
+        label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -120,7 +121,7 @@ class LoginView: UIView {
             messageView.topAnchor.constraint(equalTo: loginButton.topAnchor, constant: 80),
             messageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
             messageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
-            messageView.heightAnchor.constraint(equalToConstant: 30),
+            messageView.heightAnchor.constraint(equalToConstant: 150),
             messageView.widthAnchor.constraint(equalToConstant: 20)
        
        ])
