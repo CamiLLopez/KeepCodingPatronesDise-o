@@ -34,6 +34,7 @@ class LoginView: UIView {
     let emailTextField = {
         let textField = UITextField()
         textField.placeholder = "Insert your email"
+        textField.autocapitalizationType = .none
         textField.textAlignment = .left
         textField.borderStyle = .roundedRect
         textField.font = UIFont.systemFont(ofSize: 16, weight: .semibold)

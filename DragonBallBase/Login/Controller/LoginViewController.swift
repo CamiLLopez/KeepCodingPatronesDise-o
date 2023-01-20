@@ -46,12 +46,12 @@ class LoginViewController: UIViewController {
         viewModel = LoginViewModel()
         
         viewModel?.updateLogin = { [weak self] login in
-            self?.login = login
+            
             
             DispatchQueue.main.async {
-                                
+            self?.login = login
             self?.messageView?.text = login
-                
+            
             }
 
         }
@@ -75,7 +75,7 @@ class LoginViewController: UIViewController {
          return
          }
         
-        self.getLogin(email: email.lowercased(), password: password)
+        self.getLogin(email: email, password: password)
         setUpUpdateUI()
     }
 }
